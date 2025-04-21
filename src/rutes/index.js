@@ -4,7 +4,7 @@ const propertys = require("./wasi/propertys");
 const funciones = require("./Funcionalidades/funciones");
 const Formularios = require("./Form/EstudioTomador/FormToamdor");
 const messenger = require("./mensajes/Whatsapp/SendWhatsapp");
-// const puppeteer = require("puppeteer");
+
 
 const router = Router();
 
