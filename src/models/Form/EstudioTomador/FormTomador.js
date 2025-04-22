@@ -5,11 +5,11 @@ const FormTomadorShema = new Schema(
     id_form: {
       type: String,
       unique: true,
-      allowNull: false,
+      allowNull: false
     },
     persona: {
       type: String,
-      allowNull: false,
+      allowNull: false
     },
     cod_inmueble: {
       type: String,
