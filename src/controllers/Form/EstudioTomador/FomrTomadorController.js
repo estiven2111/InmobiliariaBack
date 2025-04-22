@@ -1,4 +1,4 @@
-// const formularioTomador = require("../../../models/form/EstudioTomador/FormTomador");
+const formularioTomador = require("../../../models/Form/EstudioTomador/FormTomador");
 // const fs = require("fs");
 // const fs_extra = require("fs-extra");
 // const path = require("path");
@@ -28,9 +28,9 @@ const FomrTomadorController = async (req) => {
     let urls_img = [];
     let datos = req.body;
 
-    // const fomrexist = await formularioTomador.findOne({
-    //   id_form: datos.id_form,
-    // });
+    const fomrexist = await formularioTomador.findOne({
+      id_form: datos.id_form,
+    });
 
     if (!fomrexist) {
       if (!req.files || Object.keys(req.files).length === 0) {
@@ -73,8 +73,8 @@ const FomrTomadorController = async (req) => {
         }
         
       }
-      // const form = await new formularioTomador(datos);
-      // await form.save();
+      const form = await new formularioTomador(datos);
+      await form.save();
       return "guardado exitoso";
     } else {
       console.log("entro al else")
