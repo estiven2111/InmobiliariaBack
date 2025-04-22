@@ -1,4 +1,4 @@
-const formularioTomador = require("../../../models/form/EstudioTomador/FormTomador");
+const formularioTomador = require("../../../models/Form/EstudioTomador/FormTomador");
 const formValidationController = async(req) =>{
     const {id_form} = req.query
     const fomrexist = await formularioTomador.findOne({
