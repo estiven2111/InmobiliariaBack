@@ -1,7 +1,7 @@
 const app = require("./src/app");
 // const {  SaveUsersController } = require("./src/controllers");
 require("./src/db")
-const port = 3002 || process.env.PORT 
+const port = process.env.PORT || 3002
 
   
   app.listen(port, () => {
